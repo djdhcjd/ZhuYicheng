@@ -1,0 +1,36 @@
+//友元成员函数输出日期
+#include <iostream>
+using namespace std;
+class Date;                                                //对Date类提前声明
+class Time                                                 //声明Time类
+{
+public:
+	Time(int h ,int m ,int s ):hour(h),minute(m),sec(s){}; //声明构造函数
+	   void display(Date&);                                //display是成员函数，形参是Date类对象的引用
+private:
+	   int hour;
+	   int minute;
+	   int sec;
+};
+class Date                                                 //声明Date类
+{
+public:
+	Date(int y ,int m ,int d):year(y),month(m),day(d){};   //声明构造函数
+    friend void Time::display(Date&);                      //声明Time中的display函数为本类的友元成员函数
+private:
+	int year;
+	int month;
+	int day;
+};
+void Time::display(Date&d)
+{
+ cout<<d.year<<"/"<<d.month<<"/"<<d.day<<endl;             //引用Date类对象中的私有数据
+ cout<<hour<<":"<<minute<<":"<<sec<<endl;                  //引用本类对象中的私有函数
+}
+int main()
+{
+  Time t1(11,06,45);                                       //定义Time类对象t1
+  Date d1(2018,4,13);                                      //定义Date类对象d1
+  t1.display(d1);                                          //调用t1中的display函数，实参是Date类对象d1
+  return 0;
+}

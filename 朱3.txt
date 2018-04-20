@@ -1,0 +1,48 @@
+#include <iostream.h>
+#include <math.h>
+void main()
+{
+float a,b,c,delta;//定义变量
+cout<<"a=";
+cin>>a;
+cout<<"b=";
+cin>>b;
+cout<<"c=";
+cin>>c;//输入变量
+delta=b*b-4*a*c;
+if (a==0)//判断a
+{
+cout<<"不是二元一次方程组"<<endl;
+}
+else if (del"x1="<<(-b+sqrt(b*b-4*a*c))/(2*a)<<endl;
+cout<<"x2="<<(-b-sqrt(b*b-4*a*c))/(2*a)<<endl;
+}
+else if (delta==0)
+{
+cout<<"有两个相同的实根"<<endl;
+cout<<"x1=x2="<<-b/(2*a)<<endl;
+}
+else
+{
+cout<<"方程无实数根"<<endl;
+}
+}ta>0)
+{
+cout<<"有两个不同的实数根"<<endl;
+cout<<
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
